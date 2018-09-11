@@ -1,93 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>众筹电影投票页面</title>
-    <!--引入css 需要用这个标签-->
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/web3.js"></script>
-    <!--核心js 文件.-->
-    <script src="jquery/jquery.js"></script>
-    <script src="bootstrap/dist/js/bootstrap.js"></script>
-    <script src="js/web3.js"></script>
-    <script src="js/crowd-abi.js"></script>
-    <script src="js/kcc-abi.js"></script>
-    <script src="js/mvc-abi.js"></script>
-    <script src="js/index.js"></script>
 
-</head>
-<body>
-<!--弹出窗口部分-->
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">请登录!</h4>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>何雅萱工作室</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Heyaxuan Studio</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          菜单
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">关于我们</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#projects">我的作品</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#signup">联系我们</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+          <h1 class="mx-auto my-0 text-uppercase">【何雅萱工作室】<br></h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">只因为阳光明媚，我来到你身旁。我们都清楚这个世界的时间，错过就不会再有。<br>
+            <br>              --------《感谢那是你，路过我青春》
+          </h2>
+          <a href="#about" class="btn btn-primary js-scroll-trigger">如梦似画</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2 class="text-white mb-4">作品集介绍</h2>
+            <p class="text-white-50">此处添加描述，此处添加描述，此处添加描述，此处添加描述，此处添加描述，此处添加描述，
+              <a href="https://rophet.github.io/heyaxuan/index.html">上一页</a>. 此处添加描述，此处添加描述，此处添加描述，.</p>
+          </div>
+        </div>
+        <img src="img/ipad.png" class="img-fluid" alt="">
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+
+        <!-- Featured Project Row -->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-8 col-lg-7">
+            <img class="img-fluid mb-3 mb-lg-0" src="img/heyaxuan.jpg" alt="">
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>个人简介</h4>
+              <p class="text-black-50 mb-0">琴弦上的灵魂画师，2018年10月生于西部某省，钟于中国古典文化。</p>
             </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="addressId">账户地址</label>
-                    <input type="email" class="addressId" id="addressId" placeholder="请输入账户地址">
+          </div>
+        </div>
+
+        <!-- Project One Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">《五彩缤纷》<br></h4>
+                  <p class="mb-0 text-white-50">时间：2016年3月24日.<br><br> 地点：西宁市
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
                 </div>
-			</div>
-			
-	
-
-            <div class="modal-footer">
-                <button type="button" class="close_win btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="Login btn btn-primary">确定</button>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
 
-<div class="container-msg">
-    <div class="movie">
-        <div>
-            <img src="./images/timg.jpeg" alt="some_text">
-            <div class='btn-margin'>
-                <input type="text" class="getWei form-control weiclass" id = 'rcharge' placeholder = '输入KCC'  style="width:100px">
-                <button type="button" class="Recharge btn btn-danger">充值</button>
-                <input type="text" class="getWei form-control weiclass" id ='vote'  placeholder = '输入MVC份额,100MVC起售,1000KCC=100MVC' style="width:350px">
-                <button type="button" class="Vote btn btn-primary">投票支持(购买份额)</button>
-                <button type="button" class="Refresh btn btn-primary">刷新数据</button>
+        <!-- Project Two Row -->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+          </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                  <h4 class="text-white">《万物复苏》<br></h4>
+                  <p class="mb-0 text-white-50">时间：2016年3月24日.<br><br> 地点：西宁市
+                  </p>
+                  <hr class="d-none d-lg-block mb-0 mr-0">
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        
-        <ul class="layout">
 
-            <li class="MovieName">
-                <span>电影名称:</span>
-                <span></span>
-            </li>
-            <li class="CrowdAmount">
-                <span>持有份额:</span>
-                <span></span>
-            </li>
-            <li class="CrowdProportion">
-                <span>持有份额占比:</span>
-                <span></span>
-            </li>
-            
-            <li class="MVC">
-                <span>MVC数量:</span>
-                <span></span>
-            </li>
-            
-            <li class="KCC">
-                <span>KCC余额:</span>
-                <span></span>
-            </li>
+      </div>
+    </section>
 
-            <li class="Time">
-                <span>投票时间:</span>
-                <span></span>
-            </li>
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-        </ul>
-    </div>
-</div>
-</body>
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">请输入邮箱接收消息订阅</h2>
+
+            <form class="form-inline d-flex">
+              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="请输入邮箱地址...">
+              <button type="submit" class="btn btn-primary mx-auto">订阅</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-black">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">地址</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">北京市海淀区XXX</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">邮箱</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">
+                  <a href="#">ceo@heyaxuan.com.cn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">电话</h4>
+                <hr class="my-4">
+                <div class="small text-black-50">138-8888-8888</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+          <a href="#" class="mx-2">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="mx-2">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+      <div class="container">
+        Copyright &copy; www.heyaxuan.com.cn 2018
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+
+  </body>
+
 </html>
